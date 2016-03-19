@@ -18,7 +18,7 @@ namespace KSPModelLessModlets
             var destPath = System.Environment.GetEnvironmentVariable("KSPGameData");
             if(string.IsNullOrEmpty(destPath))
             {
-                Console.WriteLine("No environment variable KSPGameData found or it is Empty. See readme.txt");
+                Console.WriteLine("No environment variable KSPGameData found or it is Empty.\nHave you restarted VS?\n See readme.txt");
                 ok = false;
             }
 
@@ -68,21 +68,21 @@ namespace KSPModelLessModlets
         private static void DoCopy(string modletFolder)
         {
             // we are in the debug folder so we need to step back from debug, bin and then up to GEH
-            const string relativePath = "../../GenericEventHandler";
+            const string relativePath = @"..\..\GenericEventHandler";
             if (!Directory.Exists(relativePath))
             {
                 Console.WriteLine("relative path didn't work, this only works by running in debug from visual studio. F5");
                 return;
             }
 
-            // Now run XCopy to copy the files
+            // Now run XCopy to copy the files  ( /z networked restartable, /s directories and non empty subdirectories, /y yes to prompts, /d only newer files, /c continue if errors /f full output /v check file size
             var startInfo = new ProcessStartInfo
             {
                 CreateNoWindow = false,
                 UseShellExecute = false,
                 FileName = "xcopy",
                 WindowStyle = ProcessWindowStyle.Normal,
-                Arguments = "\"" + relativePath + "\" " + "\"" + modletFolder + "\" /x /s /y /z /c"
+                Arguments = "\"" + relativePath + "\" " + "\"" + modletFolder + "\" /z /s /y /d /c /f /v"
             };
 
             try
