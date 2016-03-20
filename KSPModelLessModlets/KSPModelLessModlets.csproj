@@ -43,11 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="GenericEventHandler\Utility\Mk1ServiceModule.cfg" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="GenericEventHandler\Aero\Mk1PodMiniWings.cfg" />
     <None Include="GenericEventHandler\Pods\CommandCoresHaveRTGs.cfg" />
     <None Include="packages.config" />
   </ItemGroup>
