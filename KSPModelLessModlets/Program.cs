@@ -62,7 +62,7 @@ namespace KSPModelLessModlets
             }
 
             Console.WriteLine("Please press any key.");
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         private static void DoCopy(string modletFolder)
