@@ -55,7 +55,7 @@
     <None Include="GenericEventHandler\Aero\Parachutes.cfg" />
     <None Include="GenericEventHandler\Rovers\RoverWheel1.cfg" />
     <None Include="GenericEventHandler\Rovers\RoverBodyScienceExperiment.cfg" />
-    <None Include="GenericEventHandler\Utility\DustScoop.cfg" />
+    <None Include="GenericEventHandler\Engines\ElectricFan.cfg" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
