@@ -1,28 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="Program.cs" company="GenericEventHandler">
+//     Copyright (c) GenericEventHandler all rights reserved. Licensed under the Mit license.
+// </copyright>
 
 namespace KSPModelLessModlets
 {
+    using System;
     using System.Diagnostics;
     using System.IO;
+
+    /// <summary>
+    /// This application copies the scripts from the working directory, directly into the game
+    /// directory when it is run
+    /// </summary>
     public static class Program
     {
-        const string FolderName = "GenericEventHandler";
+        /// <summary>
+        /// the folder name inside the GameData directory that will hold the modlets
+        /// </summary>
+        private const string FolderName = "GenericEventHandler";
+
+        /// <summary>
+        /// The main entry point for the file copy program
+        /// </summary>
         public static void Main()
         {
             var ok = true;
+
             // Check if we have the environment variable setup.
             var destPath = System.Environment.GetEnvironmentVariable("KSPGameData");
-            if(string.IsNullOrEmpty(destPath))
+            if (string.IsNullOrEmpty(destPath))
             {
                 Console.WriteLine("No environment variable KSPGameData found or it is Empty.\nHave you restarted VS?\n See readme.txt");
                 ok = false;
             }
 
-            if(ok)
+            if (ok)
             {
                 // Check that the directory exists.
                 if (!System.IO.Directory.Exists(destPath))
@@ -39,9 +51,11 @@ namespace KSPModelLessModlets
                     case 0:
                         Console.WriteLine("Module Manager not found in GameData directory, please check your environment variables and that you have ModuleManager installed. See Readme.txt");
                         break;
+
                     case 1:
                         Console.WriteLine("Modulemanager detected.");
                         break;
+
                     default:
                         Console.WriteLine("Warning! More than one ModuleManager found, delete all the previous versions.");
                         ok = false;
@@ -55,16 +69,20 @@ namespace KSPModelLessModlets
                     Directory.CreateDirectory(modletFolder);
                 }
 
-                if(ok)
+                if (ok)
                 {
                     DoCopy(modletFolder);
                 }
             }
 
             Console.WriteLine("Please press any key.");
-            //Console.ReadKey();
+            ////Console.ReadKey();
         }
 
+        /// <summary>
+        /// Copy the folder to the destination
+        /// </summary>
+        /// <param name="modletFolder">the destination folder</param>
         private static void DoCopy(string modletFolder)
         {
             // we are in the debug folder so we need to step back from debug, bin and then up to GEH
@@ -75,7 +93,9 @@ namespace KSPModelLessModlets
                 return;
             }
 
-            // Now run XCopy to copy the files  ( /z networked restartable, /s directories and non empty subdirectories, /y yes to prompts, /d only newer files, /c continue if errors /f full output /v check file size
+            // Now run XCopy to copy the files ( /z networked restartable, /s directories and non
+            // empty subdirectories, /y yes to prompts, /d only newer files, /c continue if errors /f
+            // full output /v check file size
             var startInfo = new ProcessStartInfo
             {
                 CreateNoWindow = false,
@@ -93,10 +113,12 @@ namespace KSPModelLessModlets
                 }
 
                 Console.WriteLine("All done.");
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine("Fatal error with xcopy");
                 Console.WriteLine(ex);
+                throw;
             }
         }
     }
