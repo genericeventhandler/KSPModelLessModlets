@@ -22,6 +22,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\KSPModelLessModlets.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>KSPModelLessModlets.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>KSPModelLessModlets.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -43,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\ScrapProjects\ScrapProject\LogWatcher\LogWatcher.licenseheader">
+      <Link>LogWatcher.licenseheader</Link>
+    </None>
     <None Include="GenericEventHandler\Aero\MicroSpoiler.cfg" />
     <None Include="GenericEventHandler\Aero\Mk2HeatResistant.cfg" />
     <None Include="GenericEventHandler\Aero\DustScoops.cfg" />
@@ -52,6 +59,7 @@
     <None Include="GenericEventHandler\Resources\Dust.Resource.cfg" />
     <None Include="GenericEventHandler\Utility\Dockingports.cfg" />
     <None Include="GenericEventHandler\Utility\LargeSolarPanel.cfg" />
+    <None Include="GenericEventHandler\Utility\miniKlaw.cfg" />
     <None Include="GenericEventHandler\Utility\Mk1ServiceModule.cfg" />
     <None Include="GenericEventHandler\Engines\DeOrbitEngine.cfg" />
     <None Include="GenericEventHandler\Aero\Parachutes.cfg" />
@@ -60,11 +68,13 @@
     <None Include="GenericEventHandler\Engines\ElectricFan.cfg" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="$(SolutionDir)stylecop.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="GenericEventHandler\Aero\Mk1PodMiniWings.cfg" />
     <None Include="GenericEventHandler\Pods\CommandCoresHaveRTGs.cfg" />
+    <None Include="KSPModelLessModlets.ruleset" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -73,10 +83,18 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Analyzer Include="packages\Asyncify.0.9.7.0\analyzers\dotnet\cs\Asyncify.dll" />
+    <Analyzer Include="packages\AsyncVoidAnalyzer.0.2.0.0\analyzers\dotnet\cs\AsyncVoidAnalyzer.dll" />
     <Analyzer Include="packages\codecracker.CSharp.1.0.0-rc6\analyzers\dotnet\cs\CodeCracker.Common.dll" />
     <Analyzer Include="packages\codecracker.CSharp.1.0.0-rc6\analyzers\dotnet\cs\CodeCracker.CSharp.dll" />
+    <Analyzer Include="packages\ExceptionAnalyzer.1.0.5\tools\analyzers\ExceptionAnalyzer.dll" />
     <Analyzer Include="packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.Common.dll" />
     <Analyzer Include="packages\Microsoft.AnalyzerPowerPack.1.1.0\analyzers\dotnet\cs\Microsoft.AnalyzerPowerPack.CSharp.dll" />
+    <Analyzer Include="packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
+    <Analyzer Include="packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+    <Analyzer Include="packages\SwitchEnumAnalyzer.1.0.0.3\tools\analyzers\SwitchEnum.dll" />
+    <Analyzer Include="packages\UnityEngineAnalyzer.1.0.0.0\analyzers\dotnet\cs\UnityEngineAnalyzer.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
