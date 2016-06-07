@@ -57,6 +57,7 @@
     <None Include="GenericEventHandler\Resources\Dust.Resource.cfg" />
     <None Include="GenericEventHandler\Utility\Dockingports.cfg" />
     <None Include="GenericEventHandler\Utility\LargeSolarPanel.cfg" />
+    <None Include="GenericEventHandler\Utility\miniKlaw.cfg" />
     <None Include="GenericEventHandler\Utility\Mk1ServiceModule.cfg" />
     <None Include="GenericEventHandler\Engines\DeOrbitEngine.cfg" />
     <None Include="GenericEventHandler\Aero\Parachutes.cfg" />
