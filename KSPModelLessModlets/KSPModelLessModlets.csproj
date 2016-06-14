@@ -53,6 +53,8 @@
     <None Include="GenericEventHandler\Aero\MicroSpoiler.cfg" />
     <None Include="GenericEventHandler\Aero\Mk2HeatResistant.cfg" />
     <None Include="GenericEventHandler\Aero\DustScoops.cfg" />
+    <None Include="GenericEventHandler\Engines\ElectricAtmRapier.cfg" />
+    <None Include="GenericEventHandler\OptionalMods\BalutesFilledWithHiydrogen.cfg" />
     <None Include="GenericEventHandler\OptionalMods\USI_Survivability.cfg" />
     <None Include="GenericEventHandler\Resources\Dust.Resource.cfg" />
     <None Include="GenericEventHandler\Utility\Dockingports.cfg" />
