@@ -56,6 +56,8 @@
     <None Include="GenericEventHandler\Engines\ElectricAtmRapier.cfg" />
     <None Include="GenericEventHandler\OptionalMods\BalutesFilledWithHiydrogen.cfg" />
     <None Include="GenericEventHandler\OptionalMods\USI_Survivability.cfg" />
+    <None Include="GenericEventHandler\Pods\CommandPodsHaveLandertrons.cfg" />
+    <None Include="GenericEventHandler\Pods\SuppliesForPods.cfg" />
     <None Include="GenericEventHandler\Resources\Dust.Resource.cfg" />
     <None Include="GenericEventHandler\Utility\Dockingports.cfg" />
     <None Include="GenericEventHandler\Utility\LargeSolarPanel.cfg" />
