@@ -34,6 +34,8 @@ namespace KSPModelLessModlets
                 ok = false;
             }
 
+            Console.WriteLine("Found KSP Path :" + destPath);
+
             if (ok)
             {
                 // Check that the directory exists.
@@ -76,7 +78,7 @@ namespace KSPModelLessModlets
             }
 
             Console.WriteLine("Please press any key.");
-            ////Console.ReadKey();
+            Console.ReadKey();
         }
 
         /// <summary>

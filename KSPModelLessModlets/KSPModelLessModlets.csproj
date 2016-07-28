@@ -57,6 +57,7 @@
     <None Include="GenericEventHandler\Engines\ElectricAtmRapier.cfg" />
     <None Include="GenericEventHandler\OptionalMods\AutoRove.cfg" />
     <None Include="GenericEventHandler\OptionalMods\BalutesFilledWithHiydrogen.cfg" />
+    <None Include="GenericEventHandler\OptionalMods\SampleReturnCapsule.cfg" />
     <None Include="GenericEventHandler\OptionalMods\USI_Survivability.cfg" />
     <None Include="GenericEventHandler\Pods\CommandPodsHaveLandertrons.cfg" />
     <None Include="GenericEventHandler\Pods\SuppliesForPods.cfg" />
