@@ -58,12 +58,13 @@
   <ItemGroup>
     <Compile Include="Connection.cs" />
     <Compile Include="ElectricTriggerModule.cs" />
+    <Compile Include="ModuleOrbitResourceHarvester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"e:\Games\Tools\pdb2mdb\pdb2mdb.exe" "$(TargetFileName)"
-xcopy /Y "$(TargetPath)" "e:\Games\Kerbal\GameData\GenericEventHandler\Plugins\"
+    <PostBuildEvent>"d:\Games\Tools\pdb2mdb\pdb2mdb.exe" "$(TargetFileName)"
+xcopy /Y "$(TargetPath)" "d:\Games\Kerbal\GameData\GenericEventHandler\Plugins\"
 xcopy /Y "$(TargetDir)$(TargetName).pdb" "d:\Games\Kerbal\GameData\GenericEventHandler\Plugins\"
 xcopy /Y "$(TargetDir)$(TargetName).dll.mdb" "d:\Games\Kerbal\GameData\GenericEventHandler\Plugins\"
 xcopy /y "$(TargetDir)*.cfg" "d:\games\kerbal\gamedata\GenericEventHandler\Plugins\"</PostBuildEvent>

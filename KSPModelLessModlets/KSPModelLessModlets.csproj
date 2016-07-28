@@ -54,6 +54,7 @@
     <None Include="GenericEventHandler\Aero\Mk2HeatResistant.cfg" />
     <None Include="GenericEventHandler\Aero\DustScoops.cfg" />
     <None Include="GenericEventHandler\Engines\ElectricAtmRapier.cfg" />
+    <None Include="GenericEventHandler\Engines\XenonRCS.cfg" />
     <None Include="GenericEventHandler\OptionalMods\AutoRove.cfg" />
     <None Include="GenericEventHandler\OptionalMods\BalutesFilledWithHiydrogen.cfg" />
     <None Include="GenericEventHandler\OptionalMods\SampleReturnCapsule.cfg" />
