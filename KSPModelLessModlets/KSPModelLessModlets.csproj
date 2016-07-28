@@ -50,6 +50,7 @@
     <None Include="..\..\ScrapProjects\ScrapProject\LogWatcher\LogWatcher.licenseheader">
       <Link>LogWatcher.licenseheader</Link>
     </None>
+    <None Include="GenericEventHandler\Aero\HeatshieldsPlus.cfg" />
     <None Include="GenericEventHandler\Aero\MicroSpoiler.cfg" />
     <None Include="GenericEventHandler\Aero\Mk2HeatResistant.cfg" />
     <None Include="GenericEventHandler\Aero\DustScoops.cfg" />
