@@ -10,7 +10,6 @@ namespace PowerTriggers
         [KSPEvent(guiActive =true, guiName = "Click Me!", active =true)]
         public void ClickMe()
         {
-            // event that fires from the ui part button
         }
 
         public override string GetInfo()

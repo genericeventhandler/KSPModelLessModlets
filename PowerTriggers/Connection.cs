@@ -13,5 +13,11 @@ namespace PowerTriggers
         {
             // this is called many times, at regular intervals.
         }
+
+
+        public void Update()
+        {
+            // updates that don't affect models.
+        }
     }
 }
